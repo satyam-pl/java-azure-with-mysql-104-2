@@ -16,9 +16,7 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="book_id")
     private int id;
-    private String title;
-    @OneToOne(cascade = CascadeType.ALL)
-    private Author author; 
+    private String title; 
    
    public Book() {
 }
@@ -45,17 +43,5 @@ public void setTitle(String title) {
     this.title = title;
 }
 
-public Author getAuthor(){
-    return author;
-}
-
-public void setAuthor(Author author) {
-    this.author = author;
-}
-
-@Override
-public String toString() {
-    return "Book [id=" + id + ", title=" + title + ", author=" + author + "]";
-}
 
 }
