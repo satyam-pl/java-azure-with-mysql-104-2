@@ -6,7 +6,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -17,6 +16,7 @@ public class Book {
     @Column(name="book_id")
     private int id;
     private String title; 
+    private String author;
    
    public Book() {
 }
@@ -42,6 +42,14 @@ public String getTitle() {
 public void setTitle(String title) {
     this.title = title;
 }
+
+
+    public String getAuthor() {
+    return author;
+}
+
+public void setAuthor(String title) {
+    this.author = author;
 
 
 }
